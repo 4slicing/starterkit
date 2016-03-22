@@ -1,0 +1,86 @@
+=font-face($name, $font-files, $eot: false, $weight: false, $style: false)
+  $iefont: unquote("#{$eot}?#iefix")
+  @font-face
+    font-family: quote($name)
+    @if $eot
+      src: font-url($eot)
+      $font-files: font-url($iefont) unquote("format('embedded-opentype')"), $font-files
+    src: $font-files
+    @if $weight
+      font-weight: $weight
+    @if $style
+      font-style: $style
+
+@function calculateRem($size)
+  $remSize: $size / 16px
+  @return $remSize * 1rem
+
+=font-size($size)
+  font-size: $size
+  font-size: calculateRem($size)
+
+=bp-large
+  @media only screen and (max-width: 60em)
+    @content
+
+=bp-medium
+  @media only screen and (max-width: 40em)
+    @content
+
+=bp-small
+  @media only screen and (max-width: 30em)
+    @content
+
+=keyframes($animation-name)
+  @-webkit-keyframes #{$animation-name}
+    @content
+
+  @-moz-keyframes #{$animation-name}
+    @content
+
+  @-ms-keyframes #{$animation-name}
+    @content
+
+  @-o-keyframes #{$animation-name}
+    @content
+
+  @keyframes #{$animation-name}
+    @content
+
+=animation($str)
+  -webkit-animation: #{$str}
+  -moz-animation: #{$str}
+  -ms-animation: #{$str}
+  -o-animation: #{$str}
+  animation: #{$str}
+
+=transition($args...)
+  -webkit-transition: $args
+  -moz-transition: $args
+  -ms-transition: $args
+  -o-transition: $args
+  transition: $args
+
+=opacity($opacity)
+  opacity: $opacity
+  $opacity-ie: $opacity * 100
+  filter: alpha(opacity = $opacity-ie)
+//IE8
+
+%clearfix
+  *zoom: 1
+  &:before, &:after
+    content: " "
+    display: table
+  &:after
+    clear: both
+
+%visuallyhidden
+  margin: -1px
+  padding: 0
+  width: 1px
+  height: 1px
+  overflow: hidden
+  clip: rect(0 0 0 0)
+  clip: rect(0, 0, 0, 0)
+  position: absolute

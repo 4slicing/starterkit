@@ -1,0 +1,19 @@
+{
+  "name": "Appai starter kit",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Appai <akbarputrapai@gmail.com>"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/plugins",
+    "test",
+    "tests"
+  ]
+}

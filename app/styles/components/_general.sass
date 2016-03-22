@@ -1,0 +1,374 @@
+/* ------------------------------------------------------------------------------------------------ */
+/* General */
+/* ------------------------------------------------------------------------------------------------ */
+
+body,html
+  background: #f9f9f9
+
+.hidden
+  display: none
+
+// Text
+.text-default
+  color: #222
+.text-red
+  color: $primary-red
+.text-grey
+  color: $primary-grey
+.text-underline
+  text-decoration: underline
+
+// Table
+.table
+  margin-bottom: 0
+table
+  &.table
+    thead
+      text-transform: uppercase
+      color: #9ba5ad
+      font-size: 14px
+.table th
+  border-top-color: transparent
+.table-default
+  th,
+  td
+    border: 0
+    padding: 0 10px 0 0 !important
+    margin: 0 !important
+  label
+    margin-bottom: 0
+    font-family: "proximanova-bold", "Helvetica Neue", Helvetica, Arial, sans-serif
+
+// Background
+.bg-secondary-grey
+  background: #e4edef
+  padding: 20px 0 30px 0
+
+.bg-white
+  background: #fff
+
+@media (min-width: $lg)
+  .bg-secondary-grey
+    padding: 40px 0 70px 0
+
+// Building
+.building-container
+  display: none
+  background-image: url("../images/img-building.png")
+  background-repeat: no-repeat
+  -webkit-background-size: cover
+  background-size: cover
+  background-position: center top
+  margin: 0 auto
+  width: 100%
+
+@media (min-width: $md)
+  .building-container
+    display: block
+    height: 450px
+
+@media (min-width: $lg)
+  .building-container
+    height: 650px
+
+@media (min-width: 1600px)
+  .building-container
+    height: 950px
+
+// Bootstrap
+.esc-wrap
+  color: #777
+
+.tooltip-inner
+  font-size: 12px
+
+.modal-backdrop
+  background: #e4edef
+  &.in
+    opacity: 1 !important
+
+.modal-grey-wrap
+  max-width: 95%
+
+@media (min-width: $md)
+  .modal-grey-wrap
+    padding: 40px 0
+
+html .form-control,
+html .btn
+  border-radius: 3px
+
+select.form-control
+  background-image: url("../images/img-arrow.png")
+  background-repeat: no-repeat
+  background-position: center right
+  -webkit-appearance: none
+  -moz-appearance: none
+  text-indent: 1px
+  text-overflow: ''
+
+select::-ms-expand
+  display: none
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button
+  -webkit-appearance: none
+  margin: 0
+
+input[type="number"]
+  -moz-appearance: textfield
+
+
+.form-line
+  border-top: 1px solid transparent
+  border-right: 1px solid transparent
+  border-left: 1px solid transparent
+  border-bottom: 1px solid $primary-red
+  font-size: 14px
+  +transition(all 0.5s)
+
+span.select2-selection__rendered
+  white-space: nowrap
+
+// Button
+.btn-link
+  text-decoration: underline
+.btn-sm
+  padding-top: 0
+  padding-bottom: 0
+.btn-long
+  width: 100%
+.form-control,
+.btn.form-control,
+.btn
+  border-radius: 2px
+  +transition(all 0.3s)
+.btn-rounded
+  border-radius: 5px
+.btn.btn-tall
+  padding-top: 10px
+  padding-bottom: 10px
+.btn-white
+  color: #777
+  background: #fff
+  &:hover,
+  &:active
+    background: #eee
+    color: $primary-grey
+.btn-grey
+  background: #dbdbdb
+  text-decoration: none
+  color: #fff
+  &:hover,
+  &:active
+    background: $secondary-grey
+    color: #fff
+.btn-grey-secondary
+  background: #dbdbdb
+  text-decoration: none
+  color: #777
+  &:hover,
+  &:active
+    background: $secondary-grey
+    color: #fff
+.btn-grey-dark
+  background: #9ba5ad
+  text-decoration: none
+  color: #fff
+  &:hover,
+  &:active
+    background: $secondary-grey
+    color: #fff
+.btn-orange
+  background: $primary-orange
+  text-decoration: none
+  color: #fff
+  &:hover,
+  &:active
+    background: $secondary-orange
+    color: #fff
+.btn-green
+  background: $primary-green
+  text-decoration: none
+  color: #fff
+  &:hover,
+  &:active
+    background: $secondary-green
+    color: #fff
+.btn-red
+  background: $primary-red
+  text-decoration: none
+  color: #fff
+  &:hover,
+  &:active
+    background: $secondary-red
+    color: #fff
+.btn-facebook
+  background: #fff
+  border: 1px solid #3b5998
+  text-decoration: none
+  color: #3b5998
+  &:hover,
+  &:active
+    background: #3b5998
+    color: #fff
+.btn-blue
+  background: $primary-blue
+  border: 1px solid $primary-blue
+  text-decoration: none
+  color: #fff
+  &:hover,
+  &:active
+    background: $secondary-blue
+    color: #fff
+.btn-transparent
+  background: transparent
+  color: #777
+.btn-white-border
+  background: #fff
+  text-decoration: none
+  border: 1px solid #eee
+  &:hover,
+  &:active
+    background: #eee
+    color: $primary-grey
+
+@media (min-width: $sm)
+  .btn-long
+    width: auto
+    padding-left: 60px
+    padding-right: 60px
+
+// Clock
+.clock-display
+  font-family: "proximanova-bold", "Helvetica Neue", Helvetica, Arial, sans-serif
+  font-size: 48px
+  text-align: center
+  margin-bottom: 10px
+
+// Main
+#main
+  min-height: 100px
+  +transition(all 0.4s)
+
+// Notification
+.notification-wrap
+  position: fixed
+  top: -100px
+  left: 0
+  right: 0
+  margin: 0 auto
+  z-index: 9
+  text-align: center
+  +transition(all 0.6s)
+  &.active
+    top: 0
+
+.notification
+  background: #d7e7c1
+  display: inline-block
+  padding: 10px 30px
+  border-radius: 0 0 4px 4px
+  text-align: center
+  .fa
+    margin-right: 10px
+
+// Select2
+.select2-photo
+  width: 25px
+  height: 25px
+  border-radius: 3px
+  margin-right: 5px
+
+.select2-item-photo
+  font-size: 14px
+
+.select2-results__option
+  border-bottom: 1px solid $primary-grey-border
+
+// Bold
+b,
+strong
+  font-family: "proximanova-bold", "Helvetica Neue", Helvetica, Arial, sans-serif
+
+// Image
+.img-photo-preview
+  border-radius: 100%
+  overflow: hidden
+  display: inline-block
+  max-width: 140px
+  min-height: 140px
+  cursor: pointer
+  img
+    width: 100%
+.form-group label.img-photo-wrap
+  color: $primary-blue
+  font-family: "proximanova-regular", "Helvetica Neue", Helvetica, Arial, sans-serif
+
+// Edit panel
+.edit-panel-wrap
+  &:hover
+    .edit-panel-hover
+      opacity: 1
+  .edit-panel-hover
+    opacity: 1
+    +transition(all 0.3s)
+
+@media (min-width: $md)
+  .edit-panel-wrap
+    .edit-panel-hover
+      opacity: 0
+
+// Back to top
+.back-top
+  position: fixed
+  right: 10px
+  bottom: -250px
+  text-align: center
+  padding: 5px 10px
+  background: $primary-blue
+  border-radius: 5px
+  -webkit-transition: all 0.5s
+  -o-transition: all 0.5s
+  transition: all 0.5s
+  z-index: 99
+
+.back-top.active
+  bottom: 10px
+
+.back-top:hover
+  background: $secondary-blue
+  text-decoration: none
+  color: #fff
+
+.back-top:hover .fa
+  color: #fff
+
+.back-top .fa
+  font-size: 18px
+  line-height: 20px
+  color: #fff
+
+@media (min-width: $lg)
+  .back-top
+    right: 20px
+    &.active
+      bottom: 20px
+
+// Error message
+.form-group
+  .text-muted
+    color: #e57373
+
+// Deletable item
+.deleteable-item
+  position: relative
+
+.deletable-panel
+  position: absolute
+  color: #D6D6D6
+  right: 0
+  top: 0
+  padding: 7px 13px
+  height: 100%
+  cursor: pointer
