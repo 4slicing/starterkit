@@ -1,5 +1,5 @@
-## Appai starter kit
-Appai starter kit is inspired by google starter kit https://github.com/google/web-starter-kit
+## Pagisore starter kit
+Pagisore starter kit is inspired by google starter kit https://github.com/google/web-starter-kit
 
 ## Feature
 - `Web-starter-kit`

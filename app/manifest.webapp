@@ -1,11 +1,8 @@
 {
   "version": "1.0.0",
-  "name": "Appai-starter-kit",
+  "name": "Pagisore-starter-kit",
   "launch_path": "/index.html",
-  "description": "Build with love <3.",
-  "icons": {
-    "128": "/images/touch/icon-128x128.png"
-  },
+  "description": "Lets something awesome",
   "developer": {
     "name": "",
     "url": ""
@@ -18,8 +15,8 @@
   },
   "locales": {
     "en": {
-      "name": "Appai-starter-kit",
-      "description": "Build with love <3."
+      "name": "Pagisore-starter-kit",
+      "description": "Lets something awesome"
     }
   }
 }
